@@ -3,7 +3,7 @@
 
 ​		自从博客搭建本来想这发一些技术性的有意思的内容，但是也没有这个习惯，因为太懒还没有真正发过一篇总结正在所学东西的一些所思。但是今天遇到了一件很糟糕的事情，倒是想不吐不快。
 
-<img src="E:\hugo_space\blog\static\images\roadbike.jpg" style="zoom:50%;" />
+<img src="images/roadbike.jpg" style="zoom:50%;" />
 
 ## 为什么我有这个idea?
 
