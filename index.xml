@@ -3,23 +3,23 @@
         <title>The blog of One Day</title>
         <link>https://maxwell-five.github.io/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 27 Sep 2022 23:33:08 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Oct 2022 16:41:50 &#43;0800</lastBuildDate>
             <atom:link href="https://maxwell-five.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>深入理解ResNet(一)</title>
+    <link>https://maxwell-five.github.io/221012/</link>
+    <pubDate>Wed, 12 Oct 2022 16:41:50 &#43;0800</pubDate>
+    <author>Maxwell JW</author>
+    <guid>https://maxwell-five.github.io/221012/</guid>
+    <description><![CDATA[为什么引入ResNet 在深度学习当中，网络的深度对模型效果影响非常大，如下图（但是越好的模型不只和深度有关）。因为CNN能够提取 low / mid / high-level 的]]></description>
+</item>
+<item>
     <title>买公路车遇到的糟心事</title>
     <link>https://maxwell-five.github.io/second/</link>
     <pubDate>Tue, 27 Sep 2022 23:33:08 &#43;0800</pubDate>
     <author>Maxwell JW</author>
     <guid>https://maxwell-five.github.io/second/</guid>
     <description><![CDATA[​ 自从博客搭建本来想这发一些技术性的有意思的内容，但是也没有这个习惯，因为太懒还没有真正发过一篇总结正在所学东西的一些所思。但是今天遇到了一]]></description>
-</item>
-<item>
-    <title>启航——我的第一篇博客</title>
-    <link>https://maxwell-five.github.io/first/</link>
-    <pubDate>Fri, 23 Sep 2022 20:58:44 &#43;0800</pubDate>
-    <author>Maxwell JW</author>
-    <guid>https://maxwell-five.github.io/first/</guid>
-    <description><![CDATA[我的第一篇博客 1 print(&#34;Hello World&#34;)]]></description>
 </item>
 </channel>
 </rss>

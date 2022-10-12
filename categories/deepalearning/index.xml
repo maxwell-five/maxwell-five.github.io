@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DeepaLearning - Category - The blog of One Day</title>
+        <link>https://maxwell-five.github.io/categories/deepalearning/</link>
+        <description>DeepaLearning - Category - The blog of One Day</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Oct 2022 16:41:50 &#43;0800</lastBuildDate><atom:link href="https://maxwell-five.github.io/categories/deepalearning/" rel="self" type="application/rss+xml" /><item>
+    <title>深入理解ResNet(一)</title>
+    <link>https://maxwell-five.github.io/221012/</link>
+    <pubDate>Wed, 12 Oct 2022 16:41:50 &#43;0800</pubDate>
+    <author>Maxwell JW</author>
+    <guid>https://maxwell-five.github.io/221012/</guid>
+    <description><![CDATA[为什么引入ResNet 在深度学习当中，网络的深度对模型效果影响非常大，如下图（但是越好的模型不只和深度有关）。因为CNN能够提取 low / mid / high-level 的]]></description>
+</item>
+</channel>
+</rss>

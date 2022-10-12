@@ -4,34 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>买公路车遇到的糟心事 - The blog of One Day</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="买公路车遇到的糟心事" />
-<meta property="og:description" content="​ 自从博客搭建本来想这发一些技术性的有意思的内容，但是也没有这个习惯，因为太懒还没有真正发过一篇总结正在所学东西的一些所思。但是今天遇到了一" />
+        <title>深入理解ResNet(一) - The blog of One Day</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="深入理解ResNet(一)" />
+<meta property="og:description" content="为什么引入ResNet 在深度学习当中，网络的深度对模型效果影响非常大，如下图（但是越好的模型不只和深度有关）。因为CNN能够提取 low / mid / high-level 的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://maxwell-five.github.io/second/" /><meta property="og:image" content="https://maxwell-five.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-09-27T23:33:08+08:00" />
-<meta property="article:modified_time" content="2022-09-27T23:33:08+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta property="og:url" content="https://maxwell-five.github.io/221012/" /><meta property="og:image" content="https://maxwell-five.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-12T16:41:50+08:00" />
+<meta property="article:modified_time" content="2022-10-12T16:41:50+08:00" /><meta property="og:site_name" content="我的网站" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://maxwell-five.github.io/logo.png"/>
 
-<meta name="twitter:title" content="买公路车遇到的糟心事"/>
-<meta name="twitter:description" content="​ 自从博客搭建本来想这发一些技术性的有意思的内容，但是也没有这个习惯，因为太懒还没有真正发过一篇总结正在所学东西的一些所思。但是今天遇到了一"/>
+<meta name="twitter:title" content="深入理解ResNet(一)"/>
+<meta name="twitter:description" content="为什么引入ResNet 在深度学习当中，网络的深度对模型效果影响非常大，如下图（但是越好的模型不只和深度有关）。因为CNN能够提取 low / mid / high-level 的"/>
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://maxwell-five.github.io/second/" /><link rel="next" href="https://maxwell-five.github.io/221012/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://maxwell-five.github.io/221012/" /><link rel="prev" href="https://maxwell-five.github.io/second/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "买公路车遇到的糟心事",
+        "headline": "深入理解ResNet(一)",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/maxwell-five.github.io\/second\/"
-        },"genre": "posts","keywords": "公路车","wordcount":  594 ,
-        "url": "https:\/\/maxwell-five.github.io\/second\/","datePublished": "2022-09-27T23:33:08+08:00","dateModified": "2022-09-27T23:33:08+08:00","publisher": {
+            "@id": "https:\/\/maxwell-five.github.io\/221012\/"
+        },"genre": "posts","keywords": "ResNet","wordcount":  855 ,
+        "url": "https:\/\/maxwell-five.github.io\/221012\/","datePublished": "2022-10-12T16:41:50+08:00","dateModified": "2022-10-12T16:41:50+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -102,9 +102,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">买公路车遇到的糟心事</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Maxwell JW</a></span>&nbsp;<span class="post-category">included in <a href="/categories/mess%E7%90%90%E4%BA%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Mess琐事</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-27">2022-09-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;594 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">深入理解ResNet(一)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Maxwell JW</a></span>&nbsp;<span class="post-category">included in <a href="/categories/deepalearning/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DeepaLearning</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-12">2022-10-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;855 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -113,42 +113,80 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#为什么我有这个idea">为什么我有这个idea?</a></li>
-    <li><a href="#发生了什么">发生了什么</a></li>
+    <li><a href="#为什么引入resnet">为什么引入ResNet</a></li>
+    <li><a href="#resnet是如何解决退化问题">ResNet是如何解决退化问题</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>​		自从博客搭建本来想这发一些技术性的有意思的内容，但是也没有这个习惯，因为太懒还没有真正发过一篇总结正在所学东西的一些所思。但是今天遇到了一件很糟糕的事情，倒是想不吐不快。</p>
-<img src="/images/roadbike.jpg" style="zoom:50%;" />
-<h2 id="为什么我有这个idea">为什么我有这个idea?</h2>
-<p>​		我是实习的时候想要有买公路车的想法，就是想体验这种疾驰的感觉。一直拖到现在，一直抱着随缘态度，因为买来不一定有时间骑。在公路车方面也做了一点功课。当前公路车市场确实火爆，生产又跟不上，好车比较稀缺。我一直想买类似斯特拉系列和捷安特SCR系列的款式，也都是网上比较推荐的，也算是入门款了。</p>
-<h2 id="发生了什么">发生了什么</h2>
-<p>​		因为想买，时常在闲鱼上看看本地挂的车有没有适合的。买二手比较便宜，但毕竟是新手，不会修车，还是专卖店有售后。之前去了湖州美利达和捷安特，车子也不多，感觉不太行。偶尔今天淘到一辆OCR5500，价格也挺便宜，￥1900，和卖家聊了一会，商量明天去看车。当时也没付款，一是他也没有说要预付款，二来我想先看看车。中午聊的晚上就说车被买走了，这其实我无所谓，只是觉得没缘分而已。但是他说完后，买哥帮我问，对方表示车还在，甚至可以2000再砍一些。这种做法就很恶心了，和卖家对峙，他说是买哥说完卖家那个所谓的朋友才以2200买走了，虽然这个卖家解释的很客气。</p>
-<p>​		孔子说：“人无信不立”。这件事以前我还从来没遇到过，我倒不是非得买这车，我也不想知道真相是什么。哎，我的第一辆公路车还遥遥无期&hellip;</p>
+            </div><div class="content" id="content"><h2 id="为什么引入resnet">为什么引入ResNet</h2>
+<p>在深度学习当中，网络的深度对模型效果影响非常大，如下图（但是越好的模型不只和深度有关）。因为CNN能够提取 low / mid / high-level 的特征，网络的层数越多，意味着能够提取到不同level的特征越丰富。并且，越深的网络提取的特征越抽象，越具有语义信息。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="\images\221012_2.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图一 ImageNet分类排名</div>
+</center>
+<p><strong>为什么不能简单的增加网络层数？</strong></p>
+<ul>
+<li>
+<p>网络深度增加时，网络准确度出现饱和，甚至出现下降。也就是网络退化问题（Degradation problem），这不同于<code>overfitting</code>。</p>
+</li>
+<li>
+<p>解决方案：对输入数据和中间层的数据进行<code>归一化</code>操作(加一个<code>Batch Normalization</code>操作。但是，这个方法仅对几十层的网络有用，当网络再往深处走的时候就无能为力了。模型的训练提高需要层数的增加，ResNet的模型方案就很好解决退化问题。</p>
+</li>
+</ul>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="\images\221012_3.png">
+    <br>
+</center>
+<h2 id="resnet是如何解决退化问题">ResNet是如何解决退化问题</h2>
+<p><code>ResNet</code>是一种残差网络(Deep residual network),下面是ResNet的一个<code>Basic block</code>结构。其中，曲线是加入的<code>shortcut</code>。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="\images\221012_1.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图三 残差网络单元</div>
+</center>
+<p>我们基于一个假设：现在你有一个浅层网络，通过向上堆积新层来建立深层网络，一个极端情况是这些增加的层什么也不学习，仅仅复制浅层网络的特征，即这样新层是恒等映射（Identity mapping）。在这种情况下，深层网络应该至少和浅层网络性能一样，也不应该出现退化现象。</p>
+<p>残差学习单元中,输出为 <code>H(x) = F(x) + x</code>，即 残差函数为<code>F(x) = H(x) - x</code> 。只要<code>F(x)=0</code>，就构成了一个恒等映射<code>H(x) = x.</code></p>
+<blockquote>
+<p>假设 输入x=5 ,图中直线部分把5映射为5.1，即 H(x) =5.1,  H(5)=F(5)+5, F(5)=0.1</p>
+<p>引入残差后的映射对输出的变化更敏感，比如原来是从5.1到5.2，映射的输出增加了1/51=2%，，而对于残差结构从5.1到5.2，映射F是从0.1到0.2，增加了100%。明显后者输出变化对权重的调整作用更大，所以效果更好。<strong>残差的思想都是去掉相同的主体部分，从而突出微小的变化</strong>。</p>
+</blockquote>
+<p>第一次写DL，对ResNet理解可能不胜到位，待我读一下<code>Kaiming He</code>大神的paper <a href="https://arxiv.org/pdf/1603.05027.pdf" title="Identity Mappings in Deep Residual Networks" target="_blank" rel="noopener noreffer ">Identity Mappings in Deep Residual Networks</a> 再来补充。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-09-27</span>
+                <span>Updated on 2022-10-12</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/second/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/221012/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://maxwell-five.github.io/second/" data-title="买公路车遇到的糟心事" data-via="xxxx" data-hashtags="公路车"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://maxwell-five.github.io/second/" data-hashtag="公路车"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://maxwell-five.github.io/second/" data-title="买公路车遇到的糟心事"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://maxwell-five.github.io/second/" data-title="买公路车遇到的糟心事"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://maxwell-five.github.io/second/" data-title="买公路车遇到的糟心事"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://maxwell-five.github.io/221012/" data-title="深入理解ResNet(一)" data-via="xxxx" data-hashtags="ResNet"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://maxwell-five.github.io/221012/" data-hashtag="ResNet"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://maxwell-five.github.io/221012/" data-title="深入理解ResNet(一)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://maxwell-five.github.io/221012/" data-title="深入理解ResNet(一)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://maxwell-five.github.io/221012/" data-title="深入理解ResNet(一)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%85%AC%E8%B7%AF%E8%BD%A6/">公路车</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/resnet/">ResNet</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav">
-            <a href="/221012/" class="next" rel="next" title="深入理解ResNet(一)">深入理解ResNet(一)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/second/" class="prev" rel="prev" title="买公路车遇到的糟心事"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>买公路车遇到的糟心事</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
